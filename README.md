@@ -1,4 +1,4 @@
-# `aipn-rust` - Assigned Internet Protocol Numbers in Rust
+# `aipn-rust` - All Assigned Internet Protocol Numbers in Rust
 
 [![Crates.io](https://img.shields.io/crates/v/aipn)](https://crates.io/crates/aipn)
 [![Docs.rs](https://docs.rs/aipn/badge.svg)](https://docs.rs/aipn)
@@ -7,9 +7,6 @@
 
 This crate/repository provides a list of all known Assigned Internet Protocol Numbers as per the [IANA Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml).
 It was created because I required a list of all protocol numbers for a project and could not find a rust crate that provided this information. Including this manually just for a single project, seemed like a waste of time. Therefore, to avoid repeating this process, I decided to create this crate.
-
-An unofficial publicly managed protocol number list as per https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml.
-
 
 ## Usage
 
