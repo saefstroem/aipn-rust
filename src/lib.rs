@@ -16,15 +16,14 @@ println!("Protocol type: {:?}", protocol);
 
 match protocol {
     AIPN::TCP => {
-        // Adjust code execution according to the link type
+        // Adjust code execution according to the protocol
     },
-    _ => println!("Unknown link type"),
+    _ => println!("Unknown protocol"),
 }
 
 let some_protocol_value=17;
 let protocol=AIPN::from_u8(some_protocol_value);
 println!("Protocol type: {:?}", protocol);
-
 ```
 
  */
