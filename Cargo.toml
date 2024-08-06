@@ -1,0 +1,12 @@
+[package]
+name = "aipn"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Unofficial Assigned Internet Protocol Numbers as per IANA."
+repository = "https://github.com/starkbamse/aipn-rust"
+keywords = ["network", "protocol", "ip"]
+categories = ["network-programming"]
+
+[dependencies]
+num_enum = "0.7.3"
