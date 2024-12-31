@@ -14,7 +14,7 @@ To use this crate, add the following to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-aipn = "0.1.1"
+aipn = "0.1.2"
 ```
 
 Then, you can use the crate as follows:
