@@ -32,7 +32,7 @@ println!("Protocol type: {:?}", protocol);
 #[repr(u8)]
 pub enum AIPN {
     /// IPv6 Hop-by-Hop Option
-    HOPOPT = 0, 
+    HOPOPT = 0,
     /// Internet Control Message Protocol
     ICMP = 1,
     /// Internet Group Management Protocol
@@ -321,7 +321,7 @@ pub enum AIPN {
     Ethernet = 143,
     /// AGGFRAG Encapsulation payload for ESP
     AGGFRAG = 144,
-    /// Network Service Header 
+    /// Network Service Header
     NSH = 145,
     /// Unknown
     #[num_enum(default)]
@@ -336,16 +336,18 @@ impl AIPN {
 
 #[cfg(test)]
 mod test {
-    use super::*;
 
     #[test]
-    #[cfg(feature="serde")]
+    #[cfg(feature = "serde")]
     fn deserialize() {
-        assert_eq!(serde_json::from_str::<AIPN>("\"IPLT\"").unwrap(), AIPN::IPLT);
+        assert_eq!(
+            serde_json::from_str::<AIPN>("\"IPLT\"").unwrap(),
+            AIPN::IPLT
+        );
     }
 
     #[test]
-    #[cfg(feature="serde")]
+    #[cfg(feature = "serde")]
     fn serialize() {
         assert_eq!(serde_json::to_string(&AIPN::IPLT).unwrap(), "\"IPLT\"");
     }
