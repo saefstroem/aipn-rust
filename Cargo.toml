@@ -10,3 +10,10 @@ categories = ["network-programming"]
 
 [dependencies]
 num_enum = "0.7.3"
+serde = { version = "1.0.217", default-features = false, features = ["derive"], optional = true }
+
+[features]
+serde = ["dep:serde"]
+
+[dev-dependencies]
+serde_json = "1.0.134"

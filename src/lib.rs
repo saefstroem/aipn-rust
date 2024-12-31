@@ -28,6 +28,7 @@ println!("Protocol type: {:?}", protocol);
 
  */
 #[derive(Debug, FromPrimitive, PartialEq)]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 #[repr(u8)]
 pub enum AIPN {
     /// IPv6 Hop-by-Hop Option
@@ -330,5 +331,22 @@ pub enum AIPN {
 impl AIPN {
     pub fn from_u8(number: u8) -> AIPN {
         Self::from_primitive(number)
+    }
+}
+
+#[cfg(test)]
+mod test {
+    use super::*;
+
+    #[test]
+    #[cfg(feature="serde")]
+    fn deserialize() {
+        assert_eq!(serde_json::from_str::<AIPN>("\"IPLT\"").unwrap(), AIPN::IPLT);
+    }
+
+    #[test]
+    #[cfg(feature="serde")]
+    fn serialize() {
+        assert_eq!(serde_json::to_string(&AIPN::IPLT).unwrap(), "\"IPLT\"");
     }
 }
