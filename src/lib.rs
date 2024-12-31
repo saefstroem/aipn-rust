@@ -27,7 +27,7 @@ println!("Protocol type: {:?}", protocol);
 ```
 
  */
-#[derive(Debug, FromPrimitive)]
+#[derive(Debug, FromPrimitive, PartialEq)]
 #[repr(u8)]
 pub enum AIPN {
     /// IPv6 Hop-by-Hop Option
